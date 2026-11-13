@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deepwell Technologies</title>
+<meta name="description" content="Deepwell Technologies LLC helps small businesses put AI to work: AI setup, automation and custom software, remotely across the US.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Deepwell Technologies LLC">
+<meta property="og:description" content="We help small businesses put AI to work.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A1F38'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23F2F7FB' stroke-width='2'/%3E%3Ccircle cx='16' cy='18' r='6.5' fill='none' stroke='%23A9BCD0' stroke-width='2'/%3E%3Ccircle cx='16' cy='20' r='3' fill='%2343C6C4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Deepwell Technologies LLC","description":"Helping small businesses put AI to work: AI setup, automation and custom software.","email":"mailto:zsali1230@gmail.com","telephone":"+1-703-223-2988","areaServed":"US"}
+</script>
+<style>
+/* Layout: a deep-navy "well" hero band with depth rings, then light sections on one 1120px column; services as three bordered cards, the process as a numbered row, contact as a single card. */
+:root {
+  --bg: #F4F7FA;
+  --surface: #FFFFFF;
+  --ink: #0C1B2D;
+  --muted: #4B5D72;
+  --line: #D9E2EB;
+  --accent: #0B7A80;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E2F1F1;
+  --hero-bg: #0A1F38;
+  --hero-ink: #F2F7FB;
+  --hero-muted: #A9BCD0;
+  --hero-line: rgba(242, 247, 251, 0.18);
+  --ring: #43C6C4;
+  --ring-ink: #04161A;
+
+  --font-display: "Sora", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+  --text-h3: 1.25rem;
+  --text-h2: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem);
+  --text-h1: clamp(2.125rem, 1.4rem + 2.9vw, 3.5rem);
+  --radius: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #08121F;
+    --surface: #0F1D2E;
+    --ink: #E6EEF6;
+    --muted: #9AACC0;
+    --line: #1F3247;
+    --accent: #43C6C4;
+    --accent-ink: #04161A;
+    --accent-soft: #11302F;
+    --hero-bg: #0B1B2F;
+    --hero-ink: #F2F7FB;
+    --hero-muted: #A9BCD0;
+    --hero-line: rgba(242, 247, 251, 0.16);
+    --ring: #43C6C4;
+    --ring-ink: #04161A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #08121F;
+  --surface: #0F1D2E;
+  --ink: #E6EEF6;
+  --muted: #9AACC0;
+  --line: #1F3247;
+  --accent: #43C6C4;
+  --accent-ink: #04161A;
+  --accent-soft: #11302F;
+  --hero-bg: #0B1B2F;
+  --hero-ink: #F2F7FB;
+  --hero-muted: #A9BCD0;
+  --hero-line: rgba(242, 247, 251, 0.16);
+  --ring: #43C6C4;
+  --ring-ink: #04161A;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+p { margin: 0; }
+a { color: inherit; }
+img, svg { max-width: 100%; }
+
+.wrap {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:focus-visible, .nav a:focus-visible, .copy:focus-visible, .contact-value:focus-visible, .brand:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+.btn-hero { background: var(--ring); color: var(--ring-ink); }
+.btn-hero-ghost { border-color: var(--hero-line); color: var(--hero-ink); }
+.btn-hero-ghost:hover { border-color: var(--hero-muted); }
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+
+/* Hero band */
+.hero { background: var(--hero-bg); color: var(--hero-ink); overflow: hidden; }
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 20px;
+}
+.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--hero-ink); border-radius: 8px; }
+.brand svg { flex: none; }
+.logo-dot { fill: var(--ring); }
+.brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-name { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; letter-spacing: -0.01em; }
+.brand-sub { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--hero-muted); margin-top: 3px; }
+.nav { display: flex; align-items: center; gap: 28px; }
+.nav a:not(.btn) { color: var(--hero-muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; border-radius: 6px; }
+.nav a:not(.btn):hover { color: var(--hero-ink); }
+.nav .btn { padding: 9px 16px; font-size: 0.95rem; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 48px;
+  padding-block: 48px 80px;
+}
+.hero-copy { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.hero .eyebrow { color: var(--ring); }
+.hero h1 { font-size: var(--text-h1); font-weight: 600; max-width: 16ch; }
+.hero-lead { font-size: var(--text-lg); color: var(--hero-muted); max-width: 54ch; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+
+.well { width: 100%; max-width: 420px; justify-self: end; height: auto; display: block; }
+.well .wall { stroke: var(--hero-line); stroke-width: 1.2; fill: none; }
+.well .ring { fill: none; stroke: var(--ring); stroke-width: 1.6; stroke-opacity: 0.32; }
+.well .water { fill: var(--ring); }
+.well .glow { fill: var(--ring); opacity: 0.18; }
+@media (prefers-reduced-motion: no-preference) {
+  .well .ring { animation: sound 4.2s ease-in-out infinite; }
+  .well .ring:nth-of-type(2) { animation-delay: 0.3s; }
+  .well .ring:nth-of-type(3) { animation-delay: 0.6s; }
+  .well .ring:nth-of-type(4) { animation-delay: 0.9s; }
+  .well .ring:nth-of-type(5) { animation-delay: 1.2s; }
+  .well .ring:nth-of-type(6) { animation-delay: 1.5s; }
+  .well .ring:nth-of-type(7) { animation-delay: 1.8s; }
+  .well .water { animation: glint 4.2s ease-in-out infinite; animation-delay: 2.1s; }
+  .btn { will-change: transform; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+  .btn:hover { transform: none; }
+}
+@keyframes sound {
+  0%, 100% { stroke-opacity: 0.32; }
+  10% { stroke-opacity: 1; }
+  35% { stroke-opacity: 0.32; }
+}
+@keyframes glint {
+  0%, 100% { opacity: 0.55; }
+  10% { opacity: 1; }
+  35% { opacity: 0.55; }
+}
+
+/* Sections */
+.section { padding-block: 88px; }
+.section + .section { border-top: 1px solid var(--line); }
+.section-head { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; max-width: 640px; }
+.section-head h2 { font-size: var(--text-h2); font-weight: 600; }
+.section-head p { color: var(--muted); font-size: var(--text-lg); }
+[id] { scroll-margin-top: 16px; }
+
+/* Services */
+.services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.service {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  min-width: 0;
+}
+.service-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.service-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.service h3 { font-size: var(--text-h3); font-weight: 600; }
+.service p { color: var(--muted); }
+.service ul { list-style: none; margin: 4px 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+.service li { display: flex; gap: 10px; align-items: baseline; font-size: 0.98rem; }
+.service li::before { content: ""; flex: none; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); transform: translateY(-2px); }
+
+/* Work */
+.work-card {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 40px;
+  padding: 36px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.work-main { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.work-kind, .work-side-title { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.work-main h3 { font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem); font-weight: 600; }
+.work-main p:not(.work-kind) { color: var(--muted); max-width: 62ch; }
+.work-main p.work-note { color: var(--ink); font-weight: 500; font-size: 0.95rem; padding: 10px 14px; background: var(--accent-soft); border-radius: 8px; max-width: none; align-self: flex-start; }
+.work-side { display: flex; flex-direction: column; gap: 12px; min-width: 0; padding-left: 32px; border-left: 1px solid var(--line); }
+.work-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.work-list li { display: flex; gap: 10px; align-items: baseline; font-weight: 500; }
+.work-list li::before { content: ""; flex: none; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); transform: translateY(-2px); }
+
+/* Process */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.step { display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid var(--line); position: relative; min-width: 0; }
+.step::before { content: ""; position: absolute; top: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+.step-num { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.step h3 { font-size: var(--text-h3); font-weight: 600; }
+.step p { color: var(--muted); }
+
+/* About */
+.about { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 56px; align-items: start; }
+.about-text { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.about-text h2 { font-size: var(--text-h2); font-weight: 600; }
+.about-text p { color: var(--muted); font-size: var(--text-lg); max-width: 60ch; }
+.facts { margin: 0; display: flex; flex-direction: column; min-width: 0; }
+.fact { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; padding-block: 14px; border-bottom: 1px solid var(--line); }
+.fact:first-child { border-top: 1px solid var(--line); }
+.fact dt { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.fact dd { margin: 0; font-weight: 500; }
+
+/* Contact */
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 44px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 4px);
+}
+.contact-intro { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; min-width: 0; }
+.contact-intro h2 { font-size: var(--text-h2); font-weight: 600; }
+.contact-intro p { color: var(--muted); font-size: var(--text-lg); }
+.contact-where { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.08em; color: var(--muted); }
+.contact-rows { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+.contact-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.contact-row:first-child { border-top: 1px solid var(--line); }
+.contact-label { display: block; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.contact-value { font-size: var(--text-lg); font-weight: 600; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; border-radius: 4px; }
+.contact-value:hover { color: var(--accent); }
+.contact-info { min-width: 0; }
+.copy {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.copy:hover { border-color: var(--accent); }
+.copy.is-done { color: var(--accent); border-color: var(--accent); }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); }
+.footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 28px; color: var(--muted); font-size: var(--text-sm); }
+.footer-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-family: var(--font-display); font-weight: 600; }
+.footer-brand .logo-dot { fill: var(--accent); }
+.tagline { font-family: var(--font-mono); letter-spacing: 0.06em; }
+
+/* Narrow screens */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; padding-block: 32px 56px; }
+  .well { max-width: 300px; justify-self: start; }
+  .about { grid-template-columns: 1fr; gap: 32px; }
+  .contact-card { grid-template-columns: 1fr; padding: 32px; gap: 28px; }
+  .work-card { grid-template-columns: 1fr; gap: 28px; padding: 32px; }
+  .work-side { padding-left: 0; border-left: 0; padding-top: 24px; border-top: 1px solid var(--line); }
+}
+@media (max-width: 760px) {
+  .nav a:not(.btn) { display: none; }
+  .services, .steps { grid-template-columns: 1fr; }
+  .steps { gap: 28px; }
+  .section { padding-block: 64px; }
+  .section-head { margin-bottom: 28px; }
+}
+@media (max-width: 420px) {
+  .contact-card { padding: 24px 20px; }
+  .service, .work-card { padding: 24px 20px; }
+  .fact { grid-template-columns: 1fr; gap: 2px; }
+  .well { max-width: 240px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="site-header">
+      <a class="brand" href="#top" id="top" aria-label="Deepwell Technologies, back to top">
+        <svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true">
+          <circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="2"></circle>
+          <circle cx="16" cy="18.6" r="8.6" fill="none" stroke="currentColor" stroke-width="2" opacity="0.6"></circle>
+          <circle class="logo-dot" cx="16" cy="21.2" r="3.6"></circle>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Deepwell</span>
+          <span class="brand-sub">Technologies</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#work">Our work</a>
+        <a href="#process">How it works</a>
+        <a href="#about">About</a>
+        <a class="btn btn-hero-ghost" href="#contact">Get in touch</a>
+      </nav>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">AI for small businesses</p>
+        <h1>We help small businesses put AI to work.</h1>
+        <p class="hero-lead">Deepwell Technologies helps small companies bring AI into their day-to-day work. We find the tasks worth automating, set up the right tools, and build custom software when off-the-shelf tools fall short. We work remotely with small businesses across the US.</p>
+        <div class="hero-actions">
+          <a class="btn btn-hero" href="#contact">Start a project</a>
+          <a class="btn btn-hero-ghost" href="#services">See what we do</a>
+        </div>
+      </div>
+
+      <svg class="well" viewBox="0 0 400 300" aria-hidden="true">
+        <line class="wall" x1="20" y1="60" x2="172" y2="245"></line>
+        <line class="wall" x1="380" y1="60" x2="228" y2="245"></line>
+        <line class="wall" x1="200" y1="112" x2="200" y2="253"></line>
+        <ellipse class="ring" cx="200" cy="60" rx="180" ry="52"></ellipse>
+        <ellipse class="ring" cx="200" cy="108" rx="146" ry="42"></ellipse>
+        <ellipse class="ring" cx="200" cy="148" rx="116" ry="33"></ellipse>
+        <ellipse class="ring" cx="200" cy="181" rx="90" ry="26"></ellipse>
+        <ellipse class="ring" cx="200" cy="208" rx="67" ry="19"></ellipse>
+        <ellipse class="ring" cx="200" cy="229" rx="46" ry="13"></ellipse>
+        <ellipse class="ring" cx="200" cy="245" rx="28" ry="8"></ellipse>
+        <ellipse class="glow" cx="200" cy="256" rx="26" ry="7"></ellipse>
+        <ellipse class="water" cx="200" cy="256" rx="11" ry="3.4"></ellipse>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services</p>
+        <h2 id="services-title">What we do</h2>
+        <p>Three ways we help small businesses save time with AI.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3.5l1.7 4.6 4.6 1.7-4.6 1.7L11 16.1l-1.7-4.6-4.6-1.7 4.6-1.7z"></path><path d="M18 14.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"></path></svg>
+          </div>
+          <h3>AI planning &amp; setup</h3>
+          <p>We look at how your business runs, find the tasks where AI saves real time, and set up the right tools for your team.</p>
+          <ul>
+            <li>Workflow review</li>
+            <li>AI tool picks and setup</li>
+            <li>Help getting your team started</li>
+          </ul>
+        </article>
+        <article class="service">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13l-3-3"></path><path d="M20 16H7l3 3"></path></svg>
+          </div>
+          <h3>AI assistants &amp; automation</h3>
+          <p>Chat assistants and automations that handle repetitive work, so you can spend your time on customers.</p>
+          <ul>
+            <li>Website chat assistants</li>
+            <li>Email and lead sorting</li>
+            <li>Connecting the apps you already use</li>
+          </ul>
+        </article>
+        <article class="service">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><path d="M3 9h18"></path><path d="M6.5 6.5h.01M9 6.5h.01"></path></svg>
+          </div>
+          <h3>Custom software &amp; websites</h3>
+          <p>Websites, web apps and internal tools built around how your business works, with AI built in where it helps.</p>
+          <ul>
+            <li>Business websites</li>
+            <li>Dashboards and internal tools</li>
+            <li>Quote, booking and tracking apps</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Our work</p>
+        <h2 id="work-title">Project spotlight</h2>
+        <p>An in-house project that shows how we build with AI.</p>
+      </div>
+      <article class="work-card">
+        <div class="work-main">
+          <p class="work-kind">In-house research project</p>
+          <h3>AI market research platform</h3>
+          <p>A system that follows a fast-moving financial market in real time, uses AI to analyze new assets as they appear, and tests trading ideas on paper before any money is involved. We test each idea against a plan written in advance and report the results plainly, including the ideas that do not work.</p>
+          <p class="work-note">Research and paper trading only. No real money is traded.</p>
+        </div>
+        <div class="work-side">
+          <p class="work-side-title">What it shows</p>
+          <ul class="work-list">
+            <li>Live data pipelines</li>
+            <li>AI analysis and scoring</li>
+            <li>Automated testing</li>
+            <li>Dashboards and reports</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="process" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Process</p>
+        <h2 id="process-title">How it works</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">Step 1</span>
+          <h3>Talk</h3>
+          <p>Tell us what is slowing your business down, or what you want to build.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">Step 2</span>
+          <h3>Plan</h3>
+          <p>We recommend the simplest solution that fits and walk you through the plan.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">Step 3</span>
+          <h3>Build</h3>
+          <p>We build it and show you how to use it.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="wrap about">
+      <div class="about-text">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">About Deepwell</h2>
+        <p>Deepwell Technologies LLC helps small businesses use AI. Big companies have whole teams working out how to use AI and building tools around it. We bring that same kind of help to small teams, sized to fit how you work.</p>
+        <p>Expect plain-English answers, no tech jargon, and software you will actually use.</p>
+      </div>
+      <dl class="facts">
+        <div class="fact"><dt>Company</dt><dd>Deepwell Technologies LLC</dd></div>
+        <div class="fact"><dt>Focus</dt><dd>AI adoption, automation, custom software</dd></div>
+        <div class="fact"><dt>Clients</dt><dd>Small businesses</dd></div>
+        <div class="fact"><dt>Location</dt><dd>Remote, serving the US</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="contact-card">
+        <div class="contact-intro">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Have a project in mind?</h2>
+          <p>Tell us a little about your business and what you need, and we can talk through next steps.</p>
+          <a class="btn btn-primary" href="mailto:zsali1230@gmail.com?subject=Project%20inquiry">Email us</a>
+          <p class="contact-where">Remote &middot; Small businesses across the US</p>
+        </div>
+        <div class="contact-rows">
+          <div class="contact-row">
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <a class="contact-value" id="contact-email" href="mailto:zsali1230@gmail.com">zsali1230@gmail.com</a>
+            </div>
+            <button class="copy" type="button" id="copy-email" data-copy="zsali1230@gmail.com" data-target="contact-email" aria-label="Copy email address"><span class="copy-label">Copy</span></button>
+          </div>
+          <div class="contact-row">
+            <div class="contact-info">
+              <span class="contact-label">Phone</span>
+              <a class="contact-value" id="contact-phone" href="tel:+17032232988">(703) 223-2988</a>
+            </div>
+            <button class="copy" type="button" id="copy-phone" data-copy="(703) 223-2988" data-target="contact-phone" aria-label="Copy phone number"><span class="copy-label">Copy</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-brand">
+      <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+        <circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="2.4"></circle>
+        <circle cx="16" cy="18.6" r="8.6" fill="none" stroke="currentColor" stroke-width="2.4" opacity="0.6"></circle>
+        <circle class="logo-dot" cx="16" cy="21.2" r="3.6"></circle>
+      </svg>
+      Deepwell Technologies
+    </span>
+    <span class="tagline">Built deep. Built well.</span>
+    <span>&copy; 2026 Deepwell Technologies LLC</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.copy[data-copy]');
+  Array.prototype.forEach.call(buttons, function (btn) {
+    var label = btn.querySelector('.copy-label');
+    var timer;
+    function reset() { label.textContent = 'Copy'; btn.classList.remove('is-done'); }
+    function show(text) {
+      label.textContent = text;
+      btn.classList.add('is-done');
+      clearTimeout(timer);
+      timer = setTimeout(reset, 1800);
+    }
+    function selectText() {
+      var target = document.getElementById(btn.getAttribute('data-target'));
+      if (!target || !window.getSelection) return;
+      var range = document.createRange();
+      range.selectNodeContents(target);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      show('Selected');
+    }
+    btn.addEventListener('click', function () {
+      var value = btn.getAttribute('data-copy');
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(value).then(function () { show('Copied'); }, selectText);
+        } else {
+          selectText();
+        }
+      } catch (e) {
+        selectText();
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
